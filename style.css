@@ -1,0 +1,484 @@
+:root {
+  --green:       #004D00;
+  --green-hover: #003800;
+  --gold:        #C9A84C;
+  --cream:       #FAF7F2;
+  --text:        #1a1a1a;
+  --text-muted:  #666666;
+  --silver-bg:   #d4d4d4;
+  --gold-bg:     #e8d48a;
+  --platinum-bg: #c8806a;
+  --monthly-bg:  #4a9a8a; /* teal so monthly stands out from the other three */
+  --white:       #ffffff;
+  --border:      #e0e0e0;
+  --font:        Georgia, serif;
+  --radius:      12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero {
+  background-color: var(--green);
+  height: 420px;
+  text-align: center;
+  padding-top: 160px;
+  padding-bottom: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: var(--white);
+}
+
+.hero h1 {
+  font-family: var(--font);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-top: 12px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.plans-section {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 72px;
+  padding-bottom: 80px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.plans-section h2 {
+  font-family: var(--font);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.plans-section > p {
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.season-toggle {
+  margin-top: 36px;
+  margin-bottom: 48px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+.season-btn {
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 36px;
+  padding-right: 36px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  background-color: var(--green);
+  color: var(--white);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.season-btn:hover {
+  background-color: var(--green-hover);
+}
+
+/* active class is added by JS when a button is clicked */
+.season-btn.active {
+  background-color: var(--green-hover);
+}
+
+.cards-grid {
+  text-align: center;
+}
+
+/* this stops the container from collapsing around the inline-block cards */
+.cards-grid::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.plan-card {
+  display: inline-block;
+  width: 30%; /* default is 3 cards so 30% each fits fine */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* when monthly card appears JS adds four-cards to the grid and all cards shrink */
+.cards-grid.four-cards .plan-card {
+  width: 22%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.card-silver {
+  background-color: var(--silver-bg);
+  color: var(--text);
+}
+
+.card-gold {
+  background-color: var(--gold-bg);
+  color: #3a2800;
+}
+
+.card-platinum {
+  background-color: var(--platinum-bg);
+  color: #2a0a00;
+}
+
+.card-monthly {
+  background-color: var(--monthly-bg);
+  color: var(--white);
+}
+
+.plan-card h2 {
+  font-family: var(--font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 8px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card-dates {
+  font-family: var(--font);
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.75;
+  margin-top: 0;
+  margin-bottom: 8px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card-price {
+  font-family: var(--font);
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 4px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card-billing {
+  font-family: var(--font);
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.75;
+  margin-top: 0;
+  margin-bottom: 12px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.plan-card ul li {
+  font-family: var(--font);
+  font-size: 0.88rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 20px;
+  padding-right: 0;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 8px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.plan-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* monthly card has a dark background so the tick needs to be white */
+.card-monthly ul li::before {
+  color: var(--white);
+}
+
+.select-btn {
+  display: block;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: var(--green);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 600;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.select-btn:hover {
+  background-color: var(--green-hover);
+}
+
+.card-disclaimer {
+  font-family: var(--font);
+  font-size: 0.72rem;
+  text-align: center;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+/* negative top pulls the badge above the card edge */
+.best-value-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  margin-left: -60px;
+  background-color: #cc2200;
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  white-space: nowrap;
+}
+
+.benefits-section {
+  width: 90%;
+  max-width: 1100px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.benefits-section h2 {
+  font-family: var(--font);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.benefits-section > p {
+  font-family: var(--font);
+  color: var(--text-muted);
+  margin-top: 8px;
+  margin-bottom: 40px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-color: var(--border);
+}
+
+.benefits-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  font-family: var(--font);
+  font-size: 0.95rem;
+}
+
+.benefits-table thead tr {
+  background-color: #f0f0f0;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border);
+}
+
+.benefits-table thead th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  min-width: 100px; /* stops column headers squishing together */
+}
+
+.benefits-table thead th:first-child {
+  text-align: left;
+  color: var(--green);
+  width: 40%;
+}
+
+.benefits-table tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border);
+}
+
+.benefits-table tbody tr:last-child {
+  border-bottom-width: 0;
+}
+
+.benefits-table tbody tr:hover {
+  background-color: #f0f7f0;
+}
+
+.benefits-table td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.benefits-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.check {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 28px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cross {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #cc2200;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 28px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* JS switches this between none and table-cell depending on the season */
+.monthly-col {
+  display: none;
+}

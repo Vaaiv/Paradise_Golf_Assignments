@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memberships-Paradise Golf</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <section class="hero">
+    <h1>Memberships</h1>
+    <p>Your own Private Club without walls</p>
+  </section>
+
+  <section class="plans-section">
+    <h2>Choose Your Membership Plan</h2>
+    <p>Find the perfect golf membership that fits your needs and lifestyle.</p>
+
+    <div class="season-toggle">
+      <button class="season-btn active" data-season="year">Year Round</button>
+      <button class="season-btn" data-season="summer">Summer</button>
+      <button class="season-btn" data-season="winter">Winter</button>
+    </div>
+
+    <div class="cards-grid">
+
+      <div class="plan-card card-silver">
+        <h2>Silver Card</h2>
+        <p class="card-dates">May 1, 2026 – April 30, 2027</p>
+        <p class="card-price"><strong>$24/month</strong></p>
+        <p class="card-billing">billed once annually ($288)</p>
+        <ul>
+          <li>2 Seasonal Coupons ($20–$50 off public rates)</li>
+          <li>Preferred Card Rates ($5–$30 off public rates)</li>
+          <li>Members for a Day Access (under $100)</li>
+          <li>Up to $10 off events</li>
+          <li>Exclusive offers on rounds at premier clubs</li>
+          <li>Up to 10% off merchandise</li>
+          <li>Access to value tee times up to 50% off</li>
+          <li>Earn points through loyalty rewards</li>
+        </ul>
+        <button class="select-btn">Select Plan</button>
+        <p class="card-disclaimer">Membership is non-transferable. Course availability may vary. Discounts and offers are subject to participating locations.</p>
+      </div>
+
+      <div class="plan-card card-gold">
+        <h2>Gold Card</h2>
+        <p class="card-dates">May 1, 2026 – April 30, 2027</p>
+        <p class="card-price"><strong>$29/month</strong></p>
+        <p class="card-billing">billed once annually ($348)</p>
+        <ul>
+          <li>1 Summer + 1 Winter Round at Heritage Isles</li>
+          <li>2 Seasonal Coupons ($20–$50 off public rates)</li>
+          <li>Preferred Card Rates ($5–$30 off public rates)</li>
+          <li>Members for a Day Access (under $100)</li>
+          <li>Up to $10 off events</li>
+          <li>Exclusive offers on rounds at premier clubs</li>
+          <li>Up to 10% off merchandise</li>
+          <li>Access to value tee times up to 50% off</li>
+          <li>Earn points through loyalty rewards</li>
+        </ul>
+        <button class="select-btn">Select Plan</button>
+        <p class="card-disclaimer">Membership is non-transferable. Course availability may vary. Discounts and offers are subject to participating locations.</p>
+      </div>
+
+      <div class="plan-card card-platinum">
+        <div class="best-value-badge">BEST VALUE</div>
+        <h2>Platinum Card</h2>
+        <p class="card-dates">May 1, 2026 – April 30, 2027</p>
+        <p class="card-price"><strong>$34/month</strong></p>
+        <p class="card-billing">billed once annually ($408)</p>
+        <ul>
+          <li>1 Summer + 1 Winter Round at Heritage Isles</li>
+          <li>1 Summer + 1 Winter Round at Citrus National</li>
+          <li>2 Seasonal Coupons ($20–$50 off public rates)</li>
+          <li>Preferred Card Rates ($5–$30 off public rates)</li>
+          <li>Members for a Day Access (under $100)</li>
+          <li>Up to $20 off events with Preferred Event Pricing</li>
+          <li>Exclusive offers on rounds at premier clubs</li>
+          <li>Up to 10% off merchandise</li>
+          <li>Access to value tee times up to 50% off</li>
+          <li>Earn points through loyalty rewards</li>
+        </ul>
+        <button class="select-btn">Select Plan</button>
+        <p class="card-disclaimer">Membership is non-transferable. Course availability may vary. Discounts and offers are subject to participating locations.</p>
+      </div>
+
+      <div class="plan-card card-monthly" id="monthlyCard" style="display:none;">
+        <h2>Monthly Card</h2>
+        <p class="card-dates">Flexible – No Annual Commitment</p>
+        <p class="card-price"><strong>$45/month</strong></p>
+        <p class="card-billing">+ $20 activation fee</p>
+        <ul>
+          <li>1 Monthly Coupon ($20–$50 off public rates)</li>
+          <li>Preferred Card Rates ($5–$30 off rack rates)</li>
+          <li>Members for a Day Access (under $100)</li>
+          <li>Up to $10 off events</li>
+          <li>Exclusive offers on rounds at premier clubs</li>
+          <li>Up to 10% off merchandise</li>
+          <li>Access to value tee times up to 50% off</li>
+          <li>Earn points through loyalty rewards</li>
+        </ul>
+        <button class="select-btn">Select Plan</button>
+        <p class="card-disclaimer">Membership is non-transferable. Course availability may vary. Discounts and offers are subject to participating locations.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <h2>Membership Features &amp; Benefits</h2>
+    <p>Compare All Features</p>
+
+    <div class="table-wrap">
+      <table class="benefits-table">
+        <thead>
+          <tr>
+            <th>Features</th>
+            <th>Silver</th>
+            <th>Gold</th>
+            <th>Platinum</th>
+            <th class="monthly-col">Monthly</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Complimentary Rounds</td>
+            <td><span class="cross">✕</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="cross">✕</span></td>
+          </tr>
+          <tr>
+            <td>Double Eagle Coupons</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Preferred Card Rates</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Members for a Day Access</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Play Day Discounts</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Premier Course Access</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Merchandise Discounts</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Online Tee Time Booking</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Loyalty Rewards Program</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Preferred Event Pricing</td>
+            <td><span class="cross">✕</span></td>
+            <td><span class="cross">✕</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="monthly-col"><span class="cross">✕</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
