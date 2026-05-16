@@ -47,6 +47,7 @@ hidden before JavaScript even loads.
 style.css 
 
 // there is a production level practice i used which i learnt in Moffit
+
 CSS variables at root for all colors and the font. Cards use
 inline-block with vertical-align top to sit side by side and
 align from the top edge.
